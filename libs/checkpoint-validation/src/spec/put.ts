@@ -211,6 +211,8 @@ export function putTests<T extends BaseCheckpointSaver>(
         "TODO: MongoDBSaver doesn't store channel deltas",
       "@langchain/langgraph-checkpoint-sqlite":
         "TODO: SQLiteSaver doesn't store channel deltas",
+      "@langchain/langgraph-checkpoint-redis":
+        "RedisSaver stores inline channel_values with no separate blob storage",
     })(
       "should only store channel_values that have changed (based on newVersions)",
       async () => {
